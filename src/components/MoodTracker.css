@@ -1,0 +1,53 @@
+.mood-tracker {
+  background-color: #d6abc0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.mood-options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mood-option {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.mood-option.selected {
+  background-color: #61dafb;
+  color: white;
+}
+
+.submit-button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-button:hover {
+  background-color: #128fdc;
+}
+
+textarea {
+  background-color: #effbff;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical; /* Allow vertical resizing of textarea */
+  height: 200px; /* Adjust the height as needed */
+  margin-top: 10px; /* Adjust spacing from mood options */
+}

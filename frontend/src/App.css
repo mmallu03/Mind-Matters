@@ -1,0 +1,25 @@
+/* src/App.css */
+.navbar {
+  background: transparent; /* Keeps the navbar background transparent */
+  position: fixed; /* Fixes the position so it stays at the top */
+  top: 0; /* Adjust vertical position */
+  right: 20px; /* Adjust horizontal position */
+  width: auto;
+  z-index: 1000; /* Ensures the navbar appears on top of other elements */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Spacing between the nav items */
+  list-style: none;
+}
+
+.nav-links a {
+  color: red; /* Text color */
+  text-decoration: none;
+  font-size: 18px; /* Font size */
+}
+
+.nav-links a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}

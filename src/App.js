@@ -1,25 +1,53 @@
-import logo from './logo.svg';
+// App.js
+import React from 'react';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom';
+import MoodTracker from './components/MoodTracker';
+import Chatbot from './components/Chatbot';
+import Dashboard from './components/Dashboard';
+import Resources from './components/Resources';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header>
+          <nav>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/moodtracker">Mood Tracker</Link></li>
+              <li><Link to="/chatbot">Chatbot</Link></li>
+              <li><Link to="/dashboard">Dashboard</Link></li>
+              <li><Link to="/resources">Resources</Link></li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/moodtracker" element={<MoodTracker />} />
+            <Route path="/chatbot" element={<Chatbot />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <footer>
+          <p>&copy; 2024 Mental Health App</p>
+        </footer>
+      </div>
+    </Router>
   );
+}
+
+function Home() {
+  return <h1>Welcome to Mental Health App</h1>;
 }
 
 export default App;
