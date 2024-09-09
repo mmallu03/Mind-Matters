@@ -7,13 +7,13 @@ const articlesData = [
   },
   {
     id: 2,
-    title: 'Mental Health Article 2',
-    link: 'https://example.com/article2'
+    title: 'Why Mental Health Needs To Be A Top Priority In The Workplace',
+    link: 'https://www.helpguide.org/articles/work/mental-health-in-the-workplace.htm'
   },
   {
     id: 3,
-    title: 'Self-Care Tips',
-    link: 'https://example.com/selfcare-tips'
+    title: 'How Sleep Deprivation Impacts Mental Health',
+    link: 'https://www.columbiapsychiatry.org/news/how-sleep-deprivation-affects-your-mental-health'
   },
   // Add more resources here
 ];

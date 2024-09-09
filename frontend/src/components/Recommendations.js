@@ -1,12 +1,10 @@
-// src/components/Recommendations.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const Recommendations = () => {
+const Recommendations = ({ refresh }) => {
   const [recommendations, setRecommendations] = useState([]);
 
-  useEffect(() => {
-    // Fetch recommendations from the backend
+  const fetchRecommendations = () => {
     axios.get('http://localhost:5000/api/recommendations')
       .then(response => {
         setRecommendations(response.data);
@@ -14,7 +12,11 @@ const Recommendations = () => {
       .catch(error => {
         console.error('There was an error fetching recommendations!', error);
       });
-  }, []);
+  };
+
+  useEffect(() => {
+    fetchRecommendations();
+  }, [refresh]); // Fetch recommendations when the component mounts or when the refresh flag changes
 
   return (
     <div>

@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react';
 import Banner from './Banner';
 import challengesImage from '../assets/challenges-banner.jpg';
 import axios from 'axios';
-import SubmitProof from './SubmitProof'; // Import the SubmitProof component
+import SubmitProof from './SubmitProof';
+import './Challenges.css';
 
 const Challenges = () => {
   const [challenges, setChallenges] = useState([]);
@@ -22,8 +23,8 @@ const Challenges = () => {
     <div>
       <Banner 
         image={challengesImage} 
-        title="Challenges" 
-        subtitle="Explore our curated list of mental health resources." 
+        title="Take on the Challenge" 
+        subtitle="Boost your mental wellness with daily tasks and earn rewards along the way!" 
       />
       <h3>30-Day Self-Love Challenge</h3>
       <ul>
